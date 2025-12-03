@@ -1,28 +1,13 @@
 {
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"extends": [],
+	"extends": [
+		"config:recommended"
+	],
 	"forkProcessing": "enabled",
 	"branchConcurrentLimit": 1000,
 	"prConcurrentLimit": 1000,
 	"prHourlyLimit": 100,
-	"packageRules": [
-		{
-			"description": "modify title column for golang.org/x packages",
-			"matchManagers": [
-				"gomod"
-			],
-			"prBodyDefinitions": {
-				"Package": "{{#if (containsString depName 'golang.org/x/')}}[{{{depName}}}](https://pkg.go.dev/{{{depName}}}){{else}}{{{depNameLinked}}}{{/if}}"
-			}
-		},
-		{
-			"matchDepNames": [
-				"golang.org/x/*"
-			],
-			"matchDepTypes": [
-				"indirect"
-			],
-			"enabled": true
-		}
+	"prBodyNotes": [
+		"This is using a local build of https://redirect.github.com/renovatebot/renovate/pull/39738"
 	]
 }
