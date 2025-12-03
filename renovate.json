@@ -2,6 +2,8 @@
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
 	"extends": [],
 	"forkProcessing": "enabled",
+	"branchConcurrentLimit": 1000,
+	"prConcurrentLimit": 1000,
 	"packageRules": [
 		{
 			"description": "modify title column for golang.org/x packages",
