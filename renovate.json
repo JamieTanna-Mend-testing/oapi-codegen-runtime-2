@@ -13,6 +13,15 @@
 			"prBodyDefinitions": {
 				"Package": "{{#if (containsString depName 'golang.org/x/')}}[{{{depName}}}](https://pkg.go.dev/{{{depName}}}){{else}}{{{depNameLinked}}}{{/if}}"
 			}
+		},
+		{
+			"matchDepNames": [
+				"golang.org/x/*"
+			],
+			"matchDepTypes": [
+				"indirect"
+			],
+			"enabled": true
 		}
 	]
 }
