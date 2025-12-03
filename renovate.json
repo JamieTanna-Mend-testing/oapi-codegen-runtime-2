@@ -4,6 +4,7 @@
 	"forkProcessing": "enabled",
 	"branchConcurrentLimit": 1000,
 	"prConcurrentLimit": 1000,
+	"prHourlyLimit": 100,
 	"packageRules": [
 		{
 			"description": "modify title column for golang.org/x packages",
