@@ -9,5 +9,16 @@
 	"prHourlyLimit": 100,
 	"prBodyNotes": [
 		"This is using a local build of https://redirect.github.com/renovatebot/renovate/pull/39738"
+	],
+	"packageRules": [
+		{
+			"matchDepNames": [
+				"golang.org/x/*"
+			],
+			"matchDepTypes": [
+				"indirect"
+			],
+			"enabled": true
+		}
 	]
 }
