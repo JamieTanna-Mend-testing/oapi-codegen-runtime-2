@@ -1,7 +1,16 @@
 {
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"extends": [
-		"local>oapi-codegen/renovate-config"
-	],
-	"forkProcessing": "enabled"
+	"extends": [],
+	"forkProcessing": "enabled",
+	"packageRules": [
+		{
+			"description": "modify title column for golang.org/x packages",
+			"matchManagers": [
+				"gomod"
+			],
+			"prBodyDefinitions": {
+				"Package": "{{#if (containsString depName 'golang.org/x/')}}[{{{depName}}}](https://pkg.go.dev/{{{depName}}}){{else}}{{{depNameLinked}}}{{/if}}"
+			}
+		}
+	]
 }
