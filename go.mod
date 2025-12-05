@@ -7,7 +7,7 @@ require (
 	github.com/gin-gonic/gin v1.9.1
 	github.com/google/uuid v1.5.0
 	github.com/kataras/iris/v12 v12.2.6-0.20230908161203-24ba4e8933b9
-	github.com/labstack/echo/v4 v4.11.4
+	github.com/labstack/echo/v4 v4.13.4
 	github.com/stretchr/testify v1.8.4
 )
 
